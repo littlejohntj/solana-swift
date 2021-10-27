@@ -21,8 +21,10 @@ public extension SolanaSDK {
             space: UInt64 = AccountInfo.span,
             programPubkey: PublicKey = PublicKey.tokenProgramId
         ) -> TransactionInstruction {
+
+            print("space \(space)")
             
-            TransactionInstruction(
+            return TransactionInstruction(
                 keys: [
                     Account.Meta(publicKey: fromPublicKey, isSigner: true, isWritable: true),
                     Account.Meta(publicKey: newPubkey, isSigner: true, isWritable: true)

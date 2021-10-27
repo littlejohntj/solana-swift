@@ -9,10 +9,14 @@ import Foundation
 
 extension SolanaSDK {
     public struct EncodableWrapper: Encodable {
-        let wrapped: Encodable
+        public let wrapped: Encodable
         
         public func encode(to encoder: Encoder) throws {
             try self.wrapped.encode(to: encoder)
+        }
+
+        public init( wrapped: Encodable ) {
+            self.wrapped = wrapped
         }
     }
 

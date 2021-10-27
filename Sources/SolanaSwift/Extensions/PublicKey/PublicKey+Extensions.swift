@@ -9,7 +9,11 @@ import Foundation
 
 public extension SolanaSDK.PublicKey {
     static let tokenProgramId: SolanaSDK.PublicKey = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+    static let metadataProgramId: SolanaSDK.PublicKey = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
     static let sysvarRent: SolanaSDK.PublicKey = "SysvarRent111111111111111111111111111111111"
+    static let sysvarClock: SolanaSDK.PublicKey = "SysvarC1ock11111111111111111111111111111111"
+    static let splTokenProgramId: SolanaSDK.PublicKey = "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+    static let candyMachineId: SolanaSDK.PublicKey = "cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ"
     static let programId: SolanaSDK.PublicKey = "11111111111111111111111111111111"
     static let wrappedSOLMint: SolanaSDK.PublicKey = "So11111111111111111111111111111111111111112"
     static let solMint: SolanaSDK.PublicKey = "Ejmc1UB4EsES5oAaRN63SpoxMJidt3ZGBrqrZk49vjTZ" // Arbitrary mint to represent SOL (not wrapped SOL).

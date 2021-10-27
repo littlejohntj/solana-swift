@@ -104,9 +104,9 @@ extension SerumSwap {
         let quoteDecimals: Decimals
         let strict: Bool
         
-        var bytes: [UInt8] {
+        public var bytes: [UInt8] {
             rate.bytes + [fromDecimals] + [quoteDecimals] + strict.bytes
-        }
+        } 
     }
     
     public struct DidSwap: BufferLayout {

@@ -35,7 +35,7 @@ extension SolanaSDK.PublicKey {
     }
     
     // MARK: - Helpers
-    static func findProgramAddress(
+    public static func findProgramAddress(
         seeds: [Data],
         programId: Self
     ) throws -> (Self, UInt8) {
@@ -54,7 +54,7 @@ extension SolanaSDK.PublicKey {
         throw SolanaSDK.Error.notFound
     }
     
-    static func createProgramAddress(
+    public static func createProgramAddress(
         seeds: [Data],
         programId: SolanaSDK.PublicKey
     ) throws -> SolanaSDK.PublicKey {
@@ -80,7 +80,7 @@ extension SolanaSDK.PublicKey {
         return try SolanaSDK.PublicKey(data: publicKeyBytes)
     }
     
-    static func createWithSeed(
+    public static func createWithSeed(
         fromPublicKey: SolanaSDK.PublicKey,
         seed: String,
         programId: SolanaSDK.PublicKey

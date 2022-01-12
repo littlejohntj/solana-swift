@@ -7,7 +7,7 @@ let package = Package(
     name: "SolanaSwift",
     platforms: [
         .macOS(.v10_12),
-        .iOS(.v10),
+        .iOS(.v14),
         .tvOS(.v10),
         .watchOS(.v3)
     ],

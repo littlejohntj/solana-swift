@@ -221,13 +221,13 @@ public extension SolanaSDK {
         }
     }
     
-    struct InnerInstruction: Decodable {
-        let index: UInt32
-        let instructions: [ParsedInstruction]
+    public struct InnerInstruction: Decodable {
+        public let index: UInt32
+        public let instructions: [ParsedInstruction]
     }
-    struct TokenBalance: Decodable {
+    public struct TokenBalance: Decodable {
         let accountIndex: UInt64
-        let mint: String
+        public let mint: String
         let uiTokenAmount: TokenAccountBalance
     }
     struct TransactionStatus: Decodable {

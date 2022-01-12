@@ -11,7 +11,7 @@ import TweetNacl
 public extension SolanaSDK {
     struct ConfirmedTransaction: Decodable {
         public let message: Message
-        let signatures: [String]
+        public let signatures: [String]
     }
 }
 
@@ -26,7 +26,7 @@ public extension SolanaSDK.ConfirmedTransaction {
 public extension SolanaSDK {
     struct ParsedInstruction: Decodable {
         struct Parsed: Decodable {
-            struct Info: Decodable {
+            public struct Info: Decodable {
                 let owner: String?
                 let account: String?
                 let source: String?
@@ -50,14 +50,14 @@ public extension SolanaSDK {
                 let wallet: String? // spl-associated-token-account
                 
                 // transferChecked
-                let tokenAmount: TokenAccountBalance?
+                public let tokenAmount: TokenAccountBalance?
             }
-            let info: Info
+            public let info: Info
             let type: String?
         }
         
         let program: String?
-        let programId: String
+        public let programId: String
         let parsed: Parsed?
         
         // swap

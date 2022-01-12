@@ -66,6 +66,13 @@ public extension SolanaSDK {
             onMethodNotFoundReplaceWith: "getConfirmedSignaturesForAddress2"
         )
     }
+    func getSignaturesForAddress(address: String, configs: RequestConfiguration? = nil, endpoint: String) -> Single<[SignatureInfo]> {
+        request(
+            overridingEndpoint: endpoint,
+            parameters: [address, configs],
+            onMethodNotFoundReplaceWith: "getConfirmedSignaturesForAddress2"
+        )
+    }
     @available(*, deprecated, renamed: "getTransaction(transactionSignature:)", message: "use getTransaction instead This method is expected to be removed in solana-core v1.8.")
     func getConfirmedTransaction(transactionSignature: String) -> Single<TransactionInfo> {
         request(
@@ -76,6 +83,13 @@ public extension SolanaSDK {
     func getTransaction(transactionSignature: String) -> Single<TransactionInfo> {
         request(
             overridingEndpoint: "https://api.mainnet-beta.solana.com",
+            parameters: [transactionSignature, "jsonParsed"],
+            onMethodNotFoundReplaceWith: "getConfirmedTransaction"
+        )
+    }
+    func getTransaction(transactionSignature: String, endpoint: String) -> Single<TransactionInfo> {
+        request(
+            overridingEndpoint: endpoint,
             parameters: [transactionSignature, "jsonParsed"],
             onMethodNotFoundReplaceWith: "getConfirmedTransaction"
         )

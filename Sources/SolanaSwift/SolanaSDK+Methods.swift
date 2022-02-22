@@ -90,7 +90,7 @@ public extension SolanaSDK {
     func getTransaction(transactionSignature: String, endpoint: String, configs: RequestConfiguration? = nil) -> Single<TransactionInfo> {
         request(
             overridingEndpoint: endpoint,
-            parameters: [transactionSignature, "jsonParsed", configs],
+            parameters: [transactionSignature, configs],
             onMethodNotFoundReplaceWith: "getConfirmedTransaction"
         )
     }
